@@ -34,11 +34,13 @@ button {
     display: flex;
     justify-content: center;
     padding: 0.5rem;
+    margin: auto;
 }
 
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -111,3 +113,4 @@ body {
 .your_location{
     align-self: center;
 }
+
