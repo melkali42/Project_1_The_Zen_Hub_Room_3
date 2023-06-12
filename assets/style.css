@@ -1,0 +1,79 @@
+h1 {
+    display: flex;
+    font-size: 2rem;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    display: flex;
+    margin-block-start: 0.60rem;
+    margin-block-end: 0.60rem;
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.your_location {
+    allign: center;
+    margin: 1rem;
+}
+
+.button {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: #2d2d2d 
+}
+
+.card {
+    background-color: #000000d2;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+    background-image: url(https://image.unsplash.com/weather)
+}
+
+.weather-today-contact {
+    background-color: #000000d2;
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.add-to-favorites {
+    margin: 0.4rem;
+}
+
+.remove-from-favorites {
+    margin: 0.4rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    border-radius: 18px;
+}
