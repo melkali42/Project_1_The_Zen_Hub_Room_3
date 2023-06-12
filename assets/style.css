@@ -21,7 +21,7 @@ h2 {
 }
 
 .your_location {
-    align: center;
+    align-content: center;
     margin: 1rem;
 }
 
