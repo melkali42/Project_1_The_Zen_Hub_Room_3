@@ -7,6 +7,7 @@ h1 {
     margin-inline-end: 60px;
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
 }
 
 h2 {
@@ -24,8 +25,16 @@ h2 {
     margin: 1rem;
 }
 
-.button {
+button {
     font-family: 'Times New Roman', Times, serif;
+    border-color: white;
+    border-style: hidden;
+    background-color:#2e2e2ed8;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5rem;
 }
 
 
@@ -36,25 +45,22 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    background: #2d2d2d 
+    background: #2d2d2d url('https://source.unsplash.com/1600x900/?weather, nature no-repeat');
 }
 
 .card {
-    background-color: #000000d2;
+    background-color: #2e2e2ed8;
     color: #ffffff;
     padding: 2rem;
-    border-radius: 20px;
     width: 100%;
     max-width: 400px;
     margin: 1rem;
-    background-image: url(https://image.unsplash.com/weather)
 }
 
 .weather-today-contact {
-    background-color: #000000d2;
+    background-color: #2e2e2ed8;
     color: #ffffff;
     padding: 2rem;
-    border-radius: 20px;
     width: 100%;
     max-width: 400px;
     margin: 1rem;
@@ -72,8 +78,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    ;
 }
 
-.search-bar {
-    border-radius: 18px;
+.search-input {
+    border: none;
+    background-color: #2e2e2ed8;
+    padding: 0.8rem;
+}
+
+.todo_suggestion{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.placeholder {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.search-button{
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+.your_location{
+    align-self: center;
 }
