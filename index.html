@@ -15,27 +15,28 @@
 
 <!-- creating header -->
     <header>
-        <h1>ZenWeatherHub</h1>
-    </header>
+        <h1>Room 3 Weather Hub</h1>
 
 <!-- creating search bar and icon button -->
-    <div class ="card">
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Search for a city" />
-            <button><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+            <button class="search-button">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
         </div>  
 
-<!-- creating a Favorites page access button-->        
-    <div class="favorites_page"> </div>
+<!-- creating a Favorites page access button-->   
+<div class="favorites_page"> </div>
         <button onclick="window.location.href='contact.html'"> ☆Favorites </button>
 
-        <h2><div class="your_location"> Local Weather</div></h2>
+    </header>
 
 <!-- creating weather card specific text +image -->
+    <div class ="card">
+        <h1><div class="your_location"> Local Weather</div></h1>  
         <div class="weather-today">
             <h3  class="city"> [city name] </h3>
-            <div class="temperature"> [degrees]°[F/C]
-            </div>
+            <h3 class="temperature"> [degrees]°[F/C]
+            </h3>
             <div class="humidity">Humidity: [humidity] </div>
             <div class="wind-speed">Wind Speed: [wind speed] </div>
             <div class="uv-index">UV Index: [uv index] </div>
@@ -47,10 +48,10 @@
 <!-- adding src image -->            
             <img src=" " 
             alt=" Weather in [city name]" class="weather-icon"/>
-        </div> <div class="short"> Today is [weather in one word]</div>
+        <div class="short"> Today is [weather in one word]</div>
 
 <!--creating the suggestion-->
-        <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
+        <h3 class="todo_suggestion">Today, the weather is perfect for [what to do] </h3>
 
 <!-- creating an add to Favorites Button -->
         <div class="add-to-favorites"></div>
