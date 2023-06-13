@@ -1,34 +1,36 @@
-// Date Format //
-function formatDate(date){
-    var date = new date();
-    console.log(date);
-    var month = date.getMonth()+1;
-    var day = date.getDate();
-
-    var dayOutput = 
-    return dayOutput
-}
-
-
 // After HTML is loaded, the page is ready to run
 $(document).ready(function(){
 
 // City Input and search history
 
 
-}
 
-function 
+
+
 // Get Weather API information //
-var apiKey = "efef11abaac2a36c513e8fee876fb288"
+var apiKey = "c3adaa7e48d20b2f65d6246f1225cb77"
+var getWeatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "units=imperial" + this.apiKey;
 
 function getWeather (city) {
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "units=imperial" + this.apiKey);
 
-    // URL needed to query the OpenWeather API database //
-var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey;
+    .then((response) => response.json())
+    .then((data) => displaygetWeather(data));
 
-    fetch(queryURL)
-    .then(function (response) {
-        for (var i = 0; < data.length; i++)
-    }
+displaygetWeather: function(data) {
+    const { name } = data;
+    const { icon, description } = date.getWeather[0];
+    const { temp, humidity } = data.main
+    const {speed} = data.wind
+    const { lat, long } = data.coord
+    console.log(name, icon, temp, humidity, speed, lat, long)
+
+// To display weather to site
+document.querySelector(".city").innertext = "Weather in " + name;
 }
+}
+
+    
+
+    
+    }
