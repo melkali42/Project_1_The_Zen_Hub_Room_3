@@ -17,8 +17,9 @@
 
     <!-- creating header -->
     <header>
-        <h1>Room 3 Weather Hub</h1>
 
+        <h1>Room 3 Weather Hub</h1>
+    </header>
 
     <!-- creating search bar and icon button -->
     <div class="card">
@@ -44,11 +45,10 @@
 
         <!-- creating weather card specific text +image -->
         <div class="weather-today">
-            <h3 class="city"> [city name] </h3>
+
+            <h3  class="city" id="city"> [city name] </h3>
             <div class="temperature"> [degrees]°[F/C]
             </div>
-
-
 
             <div class="humidity">Humidity: [humidity] </div>
             <div class="wind-speed">Wind Speed: [wind speed] </div>
@@ -88,13 +88,9 @@
         <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
 
 
-
-        <!-- creating an add to Favorites Button -->
-        <div class="add-to-favorites"></div>
-        <button> Add to ☆Favorites </button>
-
-    </div>
-    </div>
+<!-- creating an add to Favorites Button -->
+        <div class="add-to-favorites" id="addToFavorites"></div>
+        <button id="addToFavorites"> Add to ☆Favorites </button>
 
     <!-- changing cursor to pointer for buttons on this page-->
     <style>
@@ -102,6 +98,7 @@
             cursor: pointer;
         }
     </style>
+
 
     <script src="assets/script.js"></script>
 </body>
