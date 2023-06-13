@@ -1,8 +1,3 @@
-// After HTML is loaded, the page is ready to run
-$(document).ready(function(){
-
-// City Input and search history
-
 
 
 
@@ -14,8 +9,8 @@ var getWeatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city
 function getWeather (city) {
     fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + "units=imperial" + this.apiKey);
 
-    .then((response) => response.json())
-    .then((data) => displaygetWeather(data));
+    then((response) => response.json())
+    then((data) => displaygetWeather(data));
 
 displaygetWeather: function(data) {
     const { name } = data;
@@ -24,13 +19,16 @@ displaygetWeather: function(data) {
     const {speed} = data.wind
     const { lat, long } = data.coord
     console.log(name, icon, temp, humidity, speed, lat, long)
-
+}
 // To display weather to site
 document.querySelector(".city").innertext = "Weather in " + name;
 }
+
+
+  // After HTML is loaded, the page is ready to run
+$(document).ready(function(){
+
+    // City Input and search history
+      
+
 }
-
-    
-
-    
-    }
