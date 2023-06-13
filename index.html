@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,62 +12,98 @@
 
 
 </head>
+
 <body>
 
-<!-- creating header -->
+    <!-- creating header -->
     <header>
         <h1>Room 3 Weather Hub</h1>
 
-<!-- creating search bar and icon button -->
-        <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Search for a city" />
-            <button class="search-button">
-                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
-        </div>  
 
-<!-- creating a Favorites page access button-->   
-<div class="favorites_page"> </div>
+    <!-- creating search bar and icon button -->
+    <div class="card">
+        <!-- change this div to a form element -->
+        <form id="form">
+            <input type="text" id="search-input" placeholder="Search for a city" />
+            <!-- add a type of submit -->
+            <button type="submit" id="search-button"><svg stroke="currentColor" fill="none" stroke-width="2"
+                    viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg></button>
+        </form>
+
+        <!-- creating a Favorites page access button-->
+        <div class="favorites_page"> </div>
         <button onclick="window.location.href='contact.html'"> ☆Favorites </button>
 
-    </header>
+        <h2>
+            <div class="your_location"> Local Weather</div>
+        </h2>
 
-<!-- creating weather card specific text +image -->
-    <div class ="card">
-        <h1><div class="your_location"> Local Weather</div></h1>  
+        <!-- creating weather card specific text +image -->
         <div class="weather-today">
-            <h3  class="city"> [city name] </h3>
-            <h3 class="temperature"> [degrees]°[F/C]
-            </h3>
+            <h3 class="city"> [city name] </h3>
+            <div class="temperature"> [degrees]°[F/C]
+            </div>
+
+
+
             <div class="humidity">Humidity: [humidity] </div>
             <div class="wind-speed">Wind Speed: [wind speed] </div>
             <div class="uv-index">UV Index: [uv index] </div>
-            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 18a5 5 0 0 0-10 0"></path><line x1="12" y1="9" x2="12" y2="2"></line><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line><line x1="1" y1="18" x2="3" y2="18"></line><line x1="21" y1="18" x2="23" y2="18"></line><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line><line x1="23" y1="22" x2="1" y2="22"></line><polyline points="16 5 12 9 8 5"></polyline></svg></i> 
-            <div class="sunset"> Sunset time: [time] </div> 
-            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 18a5 5 0 0 0-10 0"></path><line x1="12" y1="2" x2="12" y2="9"></line><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line><line x1="1" y1="18" x2="3" y2="18"></line><line x1="21" y1="18" x2="23" y2="18"></line><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line><line x1="23" y1="22" x2="1" y2="22"></line><polyline points="8 6 12 2 16 6"></polyline></svg></i> 
+            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 18a5 5 0 0 0-10 0"></path>
+                    <line x1="12" y1="9" x2="12" y2="2"></line>
+                    <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                    <line x1="1" y1="18" x2="3" y2="18"></line>
+                    <line x1="21" y1="18" x2="23" y2="18"></line>
+                    <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                    <line x1="23" y1="22" x2="1" y2="22"></line>
+                    <polyline points="16 5 12 9 8 5"></polyline>
+                </svg></i>
+            <div class="sunset"> Sunset time: [time] </div>
+            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 18a5 5 0 0 0-10 0"></path>
+                    <line x1="12" y1="2" x2="12" y2="9"></line>
+                    <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                    <line x1="1" y1="18" x2="3" y2="18"></line>
+                    <line x1="21" y1="18" x2="23" y2="18"></line>
+                    <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                    <line x1="23" y1="22" x2="1" y2="22"></line>
+                    <polyline points="8 6 12 2 16 6"></polyline>
+                </svg></i>
             <div class="sunrise"> Sunrise time: [time] </div>
 
-<!-- adding src image -->            
-            <img src=" " 
-            alt=" Weather in [city name]" class="weather-icon"/>
+
+            <!-- adding src image -->
+            <img src=" " alt=" Weather in [city name]" class="weather-icon" />
+        </div>
         <div class="short"> Today is [weather in one word]</div>
 
-<!--creating the suggestion-->
-        <h3 class="todo_suggestion">Today, the weather is perfect for [what to do] </h3>
+        <!--creating the suggestion-->
+        <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
 
-<!-- creating an add to Favorites Button -->
+
+
+        <!-- creating an add to Favorites Button -->
         <div class="add-to-favorites"></div>
         <button> Add to ☆Favorites </button>
 
-        </div>   
+    </div>
     </div>
 
-<!-- changing cursor to pointer for buttons on this page-->
+    <!-- changing cursor to pointer for buttons on this page-->
     <style>
-        button{
+        button {
             cursor: pointer;
         }
     </style>
 
-<script src="assets/js/script.js"></script>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
