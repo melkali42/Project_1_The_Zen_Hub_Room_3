@@ -83,7 +83,7 @@ body {
     ;
 }
 
-.search-input {
+#search-input {
     border: none;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -106,7 +106,7 @@ body {
     margin: 1rem;
 }
 
-.search-button{
+#search-button{
     margin: 0.5rem;
     padding: 0.8rem;
     border-radius: 50%;
