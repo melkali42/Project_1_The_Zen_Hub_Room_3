@@ -5,24 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    
 
     <title>☆Favorites Page</title>
 </head>
 <body>
 <!--creating header for Favorites page -->
     <header>
-        <h2>☆Favorites</h2>
-    </header>
+        <h2>  <div class="favorites"></div> ☆Favorites</h2>
 
 <!--creating a button to go back to the home page -->
 <div class="home_page"> </div>
 <button onclick="window.location.href='index.html'">Back Home</button>
+</header>
 
 <!--adding the same card format card for Favorite cities-->
-<div class="weather-today">
+<div class="weather-today-contact">
     <h3  class="city"> [city name] </h3>
-    <div class="temperature"> [degrees]°[F/C]
-    </div>
+    <h3 class="temperature"> [degrees]°[F/C]
+    </h3>
     <div class="humidity">Humidity: [humidity] </div>
     <div class="wind-speed">Wind Speed: [wind speed] </div>
     <div class="uv-index">UV Index: [uv index] </div>
@@ -34,10 +35,10 @@
 <!-- adding src image -->            
     <img src=" " 
     alt=" Weather in [city name]" class="weather-icon"/>
-</div> <div class="short"> Today is [weather in one word]</div>
+<div class="short"> Today is [weather in one word]</div>
 
 <!--creating the suggestion-->
-<div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
+<h3 class="todo_suggestion">Today, the weather is perfect for [what to do] </h3>
 
 <!-- creating a remove from Favorites Button -->
 <div class="remove-from-favorites"></div>

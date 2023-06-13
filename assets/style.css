@@ -1,0 +1,123 @@
+h1 {
+    display: flex;
+    font-size: 2rem;
+    margin-block-start: 0.67rem;
+    margin-block-end: 0.67rem;
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+h2 {
+    display: flex;
+    margin-block-start: 0.60rem;
+    margin-block-end: 0.60rem;
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.your_location {
+    align-content: center;
+    margin: 1rem;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    border-color: white;
+    border-style: hidden;
+    background-color:#2e2e2ed8;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background: #1b1b1b url(https://picsum.photos/1600/900?weather,nature,landscape,
+    )
+}
+
+.card {
+    background-color: #2e2e2ed8;
+    color: #ffffff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.weather-today-contact {
+    background-color: #2e2e2ed8;
+    color: #ffffff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem;
+}
+
+.add-to-favorites {
+    margin: 0.4rem;
+}
+
+.remove-from-favorites {
+    margin: 0.4rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+}
+
+.search-input {
+    border: none;
+    background-color: #2e2e2ed8;
+    color: #ffffff;
+    padding: 0.8rem;
+}
+
+.todo_suggestion{
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.placeholder {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.search-button{
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 50%;
+}
+
+
+.favorites{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+    
