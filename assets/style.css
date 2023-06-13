@@ -14,15 +14,16 @@ h2 {
     display: flex;
     margin-block-start: 0.60rem;
     margin-block-end: 0.60rem;
-    margin-inline-start: 60px;
+    margin-inline-start: 84px;
     margin-inline-end: 60px;
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
 }
 
 .your_location {
     align-content: center;
-    margin: 1rem;
+    margin: 0.5rem
 }
 
 button {
@@ -46,8 +47,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
-    background: #1b1b1b url(https://picsum.photos/1600/900?weather,nature,landscape,
-    )
+    background: #1b1b1b url(https://picsum.photos/1600/900?weather,nature)
 }
 
 .card {
@@ -84,6 +84,7 @@ body {
 }
 
 #search-input {
+    margin-inline-start: 84px;
     border: none;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -93,6 +94,7 @@ body {
 .todo_suggestion{
     font-style: italic;
     font-weight: lighter;
+    padding: 1rem;
 }
 
 .placeholder {
@@ -110,8 +112,8 @@ body {
     margin: 0.5rem;
     padding: 0.8rem;
     border-radius: 50%;
+    margin-inline-start: 84px;
 }
-
 
 .favorites{
     display: flex;
@@ -119,5 +121,34 @@ body {
     justify-content: center;
     align-items: center;
     padding: auto;
+    margin-inline-start: -26px;
+
 }
-    
+
+.widget-container{
+    padding: 1rem;
+    margin: auto;
+    border-radius: 3px;
+    background-color: #2e2e2ed8;
+    color: #ffffff;
+}
+
+
+.temperature{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-inline-start: 83px;
+}
+
+.short{
+    font-size: large;
+    font-weight: lighter;
+    margin-inline-start: 128px;
+    padding-bottom: 1rem;
+}
+
+#city{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-inline-start: 122px;
+}
