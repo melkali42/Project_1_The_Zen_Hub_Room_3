@@ -6,7 +6,7 @@ const forecastContainer=document.querySelector(".forecast")
 const historicalContainer=document.querySelector(".historicalSearch")
 const historyTitle=document.querySelector("#historyTitle")
 const sub=document.querySelector(".herosub")
-const todaysDate= .dayjs().format("dddd, D MMMM YYYY")
+const todaysDate= dayjs().format("dddd, D MMMM YYYY")
 sub.textContent=todaysDate
 let cityArray=[]
 
@@ -46,21 +46,15 @@ const getApiData=(userInput)=>{
     console.log(Name, icon, temp, humidity, speed, lat, long)
 
     //To display Weather to the site
-    document.querySelector(".cityInput").inner
+    document.querySelector(".cityInput").innerText = "Weather In" + Name;
+    document.querySelector("icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
 
 
 
 
 
 
-const displayCurrentWeather=(data)=>{
 
-    // This is the main card information
-    const card= document.createElement("div")
-    card.setAttribute("class", "card")
-
-    //Header information for city names and icon
-}
 
 
 
