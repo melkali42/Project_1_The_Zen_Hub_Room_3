@@ -36,20 +36,24 @@ function getCurrentWeatherInfo(cityName) {
       console.log(data);
     });
 
-    function displayCurrentWeather(data) {
-      const { name } = data;
-      const { icon, description } = data.weather[0];
-      const { temp, humidity } = data.main;
-      const { speed } = data.wind;
-      
 
-      console.log(name, icon, description, temp, humidity, speed);
+    function displayCurrentWeather(){
+    const { Name } = data; 
+    const { icon, description } = data.currentWeatherUrl[0];
+    const { temp, humidity } = data.main
+    const { speed } = data.wind
+        console.log(Name, icon, temp, humidity, speed)
 
-      document.querySelector(".city").innerText = "Weather in " + name;
-      document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    //To display Weather to the site
+    document.querySelector(".cityInput").innerText = "Weather In" + Name;
+    document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector(".description").innerText = description;
+    document.queryselection(".temp").innerText = temp + "°C";
+    document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+    document.querySelector(".speed").innerText = "Wind Speed: " + speed + "MPH"
     }
-
   }
+
 
 form.addEventListener ("submit", function (event) {
   event.preventDefault();
@@ -57,3 +61,10 @@ form.addEventListener ("submit", function (event) {
   console.log(cityName);
   getCurrentWeatherInfo(cityName);
 })
+
+
+
+
+
+
+
