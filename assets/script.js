@@ -13,7 +13,7 @@ localStorage.setItem("allFavorites", JSON.stringify(favoritesList));
 console.log(favoritesList);
 }
 
-addFav.addEventListener("click", function(addFavorite){
+addFav.addEventListener("click", function(){
     console.log("Done!");
   });
 
@@ -36,6 +36,7 @@ function getCurrentWeatherInfo(cityName) {
       console.log(data);
     });
 
+
     function displayCurrentWeather(){
     const { Name } = data; 
     const { icon, description } = data.currentWeatherUrl[0];
@@ -53,11 +54,16 @@ function getCurrentWeatherInfo(cityName) {
     }
   }
 
-form.addEventListener("submit", function (event) {
+
+form.addEventListener ("submit", function (event) {
   event.preventDefault();
   var cityName = searchInput.value;
+  console.log(cityName);
   getCurrentWeatherInfo(cityName);
 })
+
+
+
 
 
 
