@@ -13,7 +13,7 @@ localStorage.setItem("allFavorites", JSON.stringify(favoritesList));
 console.log(favoritesList);
 }
 
-addFav.addEventListener("click", function(addFavorite){
+addFav.addEventListener("click", function (addFavorite){
     console.log("Done!");
   });
 
@@ -41,3 +41,4 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   var cityName = searchInput.value;
   getCurrentWeatherInfo(cityName);
+});
