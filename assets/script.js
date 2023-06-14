@@ -36,11 +36,12 @@ function getCurrentWeatherInfo(cityName) {
       console.log(data);
     });
 
+    function displayCurrentWeather(){
     const { Name } = data; 
-    const { icon, description } = date.getWeatherURL[0];
+    const { icon, description } = data.currentWeatherUrl[0];
     const { temp, humidity } = data.main
     const { speed } = data.wind
-        console.log(Name, icon, temp, humidity, speed, lat, long)
+        console.log(Name, icon, temp, humidity, speed)
 
     //To display Weather to the site
     document.querySelector(".cityInput").innerText = "Weather In" + Name;
@@ -49,7 +50,7 @@ function getCurrentWeatherInfo(cityName) {
     document.queryselection(".temp").innerText = temp + "°C";
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".speed").innerText = "Wind Speed: " + speed + "MPH"
-
+    }
   }
 
 form.addEventListener("submit", function (event) {
