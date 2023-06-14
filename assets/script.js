@@ -13,7 +13,7 @@ localStorage.setItem("allFavorites", JSON.stringify(favoritesList));
 console.log(favoritesList);
 }
 
-addFav.addEventListener("click", function(addFavorite){
+addFav.addEventListener("click", function(){
     console.log("Done!");
   });
 
@@ -35,9 +35,25 @@ function getCurrentWeatherInfo(cityName) {
     .then((data) => {
       console.log(data);
     });
-}
 
-form.addEventListener("submit", function (event) {
+    function displayCurrentWeather(data) {
+      const { name } = data;
+      const { icon, description } = data.weather[0];
+      const { temp, humidity } = data.main;
+      const { speed } = data.wind;
+      
+
+      console.log(name, icon, description, temp, humidity);
+
+      document.querySelector(".city").innerText = "Weather in " + name;
+      document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    }
+
+
+form.addEventListener ("submit", function (event)) {
   event.preventDefault();
   var cityName = searchInput.value;
   getCurrentWeatherInfo(cityName);
+}
+
+}
