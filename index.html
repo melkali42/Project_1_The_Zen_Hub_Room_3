@@ -59,19 +59,19 @@
         <div class="favorites_page"> </div>
         <button onclick="window.location.href='contact.html'"> ☆Favorites </button>
 
-        <h2>
-            <div class="your_location"> Local Weather</div>
-        </h2>
-
         <!-- creating weather card specific text +image -->
-        <div class="weather-today">
+        <div class="weather-today loading">
             <h3  class="city" id="city"> [city name]</h3>
             <h3 class="temperature"> [degrees]°[F/C]
             </h3>
-            <div class="short"> [cloudy]</div>
+            <div class="flex">
+            <!-- adding src image -->
+                <img src="" alt=" Weather in [city name]" class="weather-icon">
+                <div class="short"> [cloudy]</div>
+            </div>
             <div class="humidity">Humidity: [humidity] </div>
             <div class="wind-speed">Wind Speed: [wind speed] </div>
-            <div class="uv-index">UV Index: [uv index] </div>
+            <div class="flex">
             <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                     stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 18a5 5 0 0 0-10 0"></path>
@@ -84,6 +84,8 @@
                     <polyline points="16 5 12 9 8 5"></polyline>
                 </svg></i>
             <div class="sunset"> Sunset time: [time] </div>
+            </div>
+            <div class="flex">
             <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                     stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17 18a5 5 0 0 0-10 0"></path>
@@ -96,11 +98,7 @@
                     <polyline points="8 6 12 2 16 6"></polyline>
                 </svg></i>
             <div class="sunrise"> Sunrise time: [time] </div>
-
-
-<!-- adding src image -->
-            <img src=" " alt=" Weather in [city name]" class="weather-icon">
-        </div>
+            </div>
 
 <!--creating the suggestion-->
         <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
