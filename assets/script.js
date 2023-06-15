@@ -34,24 +34,61 @@ function getCurrentWeatherInfo(cityName) {
     })
     .then((data) => {
       console.log(data);
+      displayCurrentWeather(data)
     });
-
-    function displayCurrentWeather(){
-    const { Name } = data; 
-    const { icon, description } = data.currentWeatherUrl[0];
-    const { temp, humidity } = data.main
-    const { speed } = data.wind
-        console.log(Name, icon, temp, humidity, speed)
-
-    //To display Weather to the site
-    document.querySelector(".cityInput").innerText = "Weather In" + Name;
-    document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
-    document.querySelector(".description").innerText = description;
-    document.queryselection(".temp").innerText = temp + "°C";
-    document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-    document.querySelector(".speed").innerText = "Wind Speed: " + speed + "MPH"
-    }
   }
+
+    function displayCurrentWeather(data) {
+      const { name } = data; 
+      const description  = data.weather[0].description;
+      const { temp, humidity } = data.main;
+      console.log(temp, humidity)
+      const { speed } = data.wind;
+      const { icon } = data.weather[0].icon;
+      const UVI = data.uvi;
+      const sunriseTimestamp = data.sys.sunrise;
+      const sunsetTimestamp = data.sys.sunset;
+      const sunriseTime = new Date(sunriseTimestamp * 1000);
+      const sunsetTime = new Date(sunsetTimestamp * 1000);
+      // const sunriseTimeString = sunriseTime.toLocaleTimeString();
+      // const sunriseTimeString = sunsetTime.toLocaleTimeString();
+      
+      // console.log(UVI)
+    
+      // To display weather on the site
+      document.querySelector(".cityName").innerText = "Weather in " + name;
+      // document.querySelector("weather-icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
+      document.querySelector(".description").innerText = "Todays weather " + description;
+      document.querySelector(".temperature").innerText = temp + "°C";
+      document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+      document.querySelector(".wind-speed").innerText = "Wind Speed: " + speed + " MPH";
+      document.querySelector(".uv-index").innertext = "UV Index" + UVI;
+      document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
+      document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
+    }
+    
+    
+
+
+
+    
+
+  //   function displayCurrentWeather(){
+  //   const { Name } = data; 
+  //   const { icon, description } = data.currentWeatherUrl[0];
+  //   const { temp, humidity } = data.main
+  //   const { speed } = data.wind
+  //       console.log(Name, icon, temp, humidity, speed)
+
+  //   //To display Weather to the site
+  //   document.querySelector(".cityInput").innerText = "Weather In" + Name;
+  //   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+  //   document.querySelector(".description").innerText = description;
+  //   document.queryselection(".temp").innerText = temp + "°C";
+  //   document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+  //   document.querySelector(".speed").innerText = "Wind Speed: " + speed + "MPH"
+  //   }
+  // }
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();

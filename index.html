@@ -46,12 +46,12 @@
         <!-- creating weather card specific text +image -->
         <div class="weather-today">
 
-            <h3  class="city" id="city"> [city name] </h3>
-            <div class="temperature"> [degrees]°[F/C]
-            </div>
+            <h3 class="cityName">[city name]</h3>
+            <div class="temperature">[degrees]°[F/C]</div>
+            <div class="humidity">Humidity: [humidity]</div>
+            <div class="wind-speed">Wind Speed: [wind speed]</div>
+            <div class="description"></div>
 
-            <div class="humidity">Humidity: [humidity] </div>
-            <div class="wind-speed">Wind Speed: [wind speed] </div>
             <div class="uv-index">UV Index: [uv index] </div>
             <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
                     stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,6 @@
                 </svg></i>
             <div class="sunrise"> Sunrise time: [time] </div>
 
-
             <!-- adding src image -->
             <img src=" " alt=" Weather in [city name]" class="weather-icon" />
         </div>
@@ -88,19 +87,19 @@
         <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
 
 
-<!-- creating an add to Favorites Button -->
+        <!-- creating an add to Favorites Button -->
         <div class="add-to-favorites" id="addToFavorites"></div>
         <button id="addToFavorites"> Add to ☆Favorites </button>
 
-    <!-- changing cursor to pointer for buttons on this page-->
-    <style>
-        button {
-            cursor: pointer;
-        }
-    </style>
+        <!-- changing cursor to pointer for buttons on this page-->
+        <style>
+            button {
+                cursor: pointer;
+            }
+        </style>
 
-    
-    <script src="assets/script.js"></script>
+
+        <script src="assets/script.js"></script>
 </body>
 
 </html>
