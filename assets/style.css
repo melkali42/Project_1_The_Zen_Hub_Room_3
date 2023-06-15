@@ -69,7 +69,7 @@ body {
 }
 
 .add-to-favorites {
-    margin: 1rem;
+    margin: 0.4rem;
 }
 
 .remove-from-favorites {
@@ -143,7 +143,7 @@ body {
 .short{
     font-size: large;
     font-weight: lighter;
-    margin-inline-start: 20px;
+    margin-inline-start: 128px;
     padding-bottom: 1rem;
 }
 
@@ -151,15 +151,4 @@ body {
     font-size: 1rem;
     font-weight: lighter;
     margin-inline-start: 122px;
-    padding-top: 1rem;
-}
-
-
-.flex{
-    display: flex;
-    align-items: center;
-}
-
-/*/ .weather-today.loading{
-    visibility: hidden;
 }
