@@ -2,6 +2,7 @@
 // Favorites button add to favorites list
 var addFav = document.getElementById("addToFavorites");
 
+
 function addFavorite() {
   var favoritesList = JSON.parse(localStorage.getItem("allFavorites"));
   if (favoritesList == null) favoritesList = [];
@@ -45,7 +46,7 @@ function displayCurrentWeather(data) {
   const { temp, humidity } = data.main;
   console.log(temp, humidity)
   const { speed } = data.wind;
-  const { icon } = data.weather[0].icon;
+  const icon  = data.weather[0].icon;
   const UVI = data.uvi;
   const sunriseTimestamp = data.sys.sunrise;
   const sunsetTimestamp = data.sys.sunset;
@@ -64,6 +65,8 @@ function displayCurrentWeather(data) {
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
   document.querySelector(".weather-today").classList.remove("loading");
+  document.querySelector(".weather-icon").src = "http://openweathermap.org/img/wn/"+ icon +".png";
+  console.log(icon);
 }
 
 //   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -76,10 +79,11 @@ form.addEventListener ("submit", function (event) {
 })
 
 var toDoButton = document.getElementById("toDoButton")
-const url = 'http://www.boredapi.com/api/activity?participants=1'
+
 
 function toDo(event) {
-  fetch(url)
+  const urlBoredApi = 'http://www.boredapi.com/api/activity?participants=1'
+  fetch(urlBoredApi)
     .then((response) => {
       return response.json();
     })
