@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 
     <title>☆Favorites Page</title>
@@ -11,45 +12,73 @@
 <body>
 <!--creating header for Favorites page -->
     <header>
-        <h2>☆Favorites</h2>
-    </header>
+        <h2> <div class="favorites"></div> ☆Favorites</h2>
 
 <!--creating a button to go back to the home page -->
 <div class="home_page"> </div>
 <button onclick="window.location.href='index.html'">Back Home</button>
+</header>
 
 <!--adding the same card format card for Favorite cities-->
-<div class="weather-today">
-    <h3  class="city"> [city name] </h3>
-    <div class="temperature"> [degrees]°[F/C]
-    </div>
-    <div class="humidity">Humidity: [humidity] </div>
-    <div class="wind-speed">Wind Speed: [wind speed] </div>
-    <div class="uv-index">UV Index: [uv index] </div>
-    <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 18a5 5 0 0 0-10 0"></path><line x1="12" y1="9" x2="12" y2="2"></line><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line><line x1="1" y1="18" x2="3" y2="18"></line><line x1="21" y1="18" x2="23" y2="18"></line><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line><line x1="23" y1="22" x2="1" y2="22"></line><polyline points="16 5 12 9 8 5"></polyline></svg></i> 
-    <div class="sunset"> Sunset time: [time] </div> 
-    <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 18a5 5 0 0 0-10 0"></path><line x1="12" y1="2" x2="12" y2="9"></line><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line><line x1="1" y1="18" x2="3" y2="18"></line><line x1="21" y1="18" x2="23" y2="18"></line><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line><line x1="23" y1="22" x2="1" y2="22"></line><polyline points="8 6 12 2 16 6"></polyline></svg></i> 
-    <div class="sunrise"> Sunrise time: [time] </div>
-
-<!-- adding src image -->            
-    <img src=" " 
-    alt=" Weather in [city name]" class="weather-icon"/>
-</div> <div class="short"> Today is [weather in one word]</div>
+<div class="card">
+    <div class="weather-today">
+        <h3  class="city" id="city"> [city name]</h3>
+        <h3 class="temperature"> [degrees]°[F/C]
+        </h3>
+        <div class="flex">
+        <!-- adding src image -->
+            <img src="" alt=" Weather in [city name]" class="weather-icon">
+            <div class="short"> [cloudy]</div>
+        </div>
+        <div class="humidity">Humidity: [humidity] </div>
+        <div class="wind-speed">Wind Speed: [wind speed] </div>
+        <div class="flex">
+            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 18a5 5 0 0 0-10 0"></path>
+                    <line x1="12" y1="9" x2="12" y2="2"></line>
+                    <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                    <line x1="1" y1="18" x2="3" y2="18"></line>
+                    <line x1="21" y1="18" x2="23" y2="18"></line>
+                    <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                    <line x1="23" y1="22" x2="1" y2="22"></line>
+                    <polyline points="16 5 12 9 8 5"></polyline>
+                </svg></i>
+            <div class="sunset"> Sunset time: [time] </div>
+            </div>
+            <div class="flex">
+            <i><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 18a5 5 0 0 0-10 0"></path>
+                    <line x1="12" y1="2" x2="12" y2="9"></line>
+                    <line x1="4.22" y1="10.22" x2="5.64" y2="11.64"></line>
+                    <line x1="1" y1="18" x2="3" y2="18"></line>
+                    <line x1="21" y1="18" x2="23" y2="18"></line>
+                    <line x1="18.36" y1="11.64" x2="19.78" y2="10.22"></line>
+                    <line x1="23" y1="22" x2="1" y2="22"></line>
+                    <polyline points="8 6 12 2 16 6"></polyline>
+                </svg></i>
+            <div class="sunrise"> Sunrise time: [time] </div>
+            </div>
 
 <!--creating the suggestion-->
-<div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
+    <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
 
-<!-- creating a remove from Favorites Button -->
-<div class="remove-from-favorites"></div>
-<button> Remove from ☆Favorites </button>
 
-<!-- changing cursor to pointer for buttons on this page-->
-<style>
-    button{
-        cursor: pointer;
-    }
-</style>
 
+<!-- creating an add to Favorites Button -->
+        <div class="add-to-favorites" id="addToFavorites"></div>
+        <button id="addToFavorites"> Add to ☆Favorites </button>
+
+    <!-- changing cursor to pointer for buttons on this page-->
+    <style>
+        button {
+            cursor: pointer;
+        }
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/js/bulma.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
