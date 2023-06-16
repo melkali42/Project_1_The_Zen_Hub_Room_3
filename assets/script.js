@@ -64,7 +64,8 @@ function displayCurrentWeather(data) {
   document.querySelector(".uv-index").innertext = "UV Index" + UVI;
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
-}
+
+ }
 
 
 //   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
