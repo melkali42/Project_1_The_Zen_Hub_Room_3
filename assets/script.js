@@ -66,7 +66,6 @@ function displayCurrentWeather(data) {
   document.querySelector(".weather-today").classList.remove("loading");
 }
 
-
 //   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
 
 form.addEventListener ("submit", function (event) {
@@ -76,8 +75,25 @@ form.addEventListener ("submit", function (event) {
   getCurrentWeatherInfo(cityName);
 })
 
+var toDoButton = document.getElementById("toDoButton")
+const url = 'http://www.boredapi.com/api/activity?participants=1'
 
+function toDo(event) {
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((responseData) => {
+      var data = responseData; // Assign response data to 'data' variable
+      console.log(data);
+      document.querySelector("#toDoButton").innerText = data.activity;
+    })
+    .catch((error) => {
+      console.log('Error:', error);
+    });
+}
 
+toDoButton.addEventListener("click", toDo);
 
 
 
