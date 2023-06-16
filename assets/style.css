@@ -136,7 +136,8 @@ body {
 .temperature{
     font-size: 1.5rem;
     font-weight: lighter;
-    margin-inline-start: 83px;
+    margin-inline-start: 143px;
+    justify-content: center;
 }
 
 .short{
