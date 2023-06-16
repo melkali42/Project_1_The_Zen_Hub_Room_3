@@ -69,7 +69,7 @@ body {
 }
 
 .add-to-favorites {
-    margin: 0.4rem;
+    margin: 1rem;
 }
 
 .remove-from-favorites {
@@ -112,7 +112,6 @@ body {
     margin: 0.5rem;
     padding: 0.8rem;
     border-radius: 50%;
-    margin-inline-start: 84px;
 }
 
 .favorites{
@@ -127,7 +126,7 @@ body {
 
 .widget-container{
     padding: 1rem;
-    margin: auto;
+    margin: 1rem;
     border-radius: 3px;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -137,13 +136,14 @@ body {
 .temperature{
     font-size: 1.5rem;
     font-weight: lighter;
-    margin-inline-start: 83px;
+    margin-inline-start: 143px;
+    justify-content: center;
 }
 
 .short{
     font-size: large;
     font-weight: lighter;
-    margin-inline-start: 128px;
+    margin-inline-start: 20px;
     padding-bottom: 1rem;
 }
 
@@ -151,6 +151,21 @@ body {
     font-size: 1rem;
     font-weight: lighter;
     margin-inline-start: 122px;
+    padding-top: 1rem;
 }
 
-/* TODO: ADD RESPONSIVE DESIGN */
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.weather-today.loading{
+    visibility: hidden;
+    max-height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+
+}
