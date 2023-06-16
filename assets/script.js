@@ -91,7 +91,7 @@ function displayCurrentWeather(data) {
 //   }
 // }
 
-form.addEventListener("submit", function (event) {
+
 
 
 
@@ -110,7 +110,7 @@ form.addEventListener("submit", function (event) {
     document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     document.querySelector(".speed").innerText = "Wind Speed: " + speed + "MPH"
     }
-  }
+  
 
 
 form.addEventListener ("submit", function (event) {
@@ -128,4 +128,4 @@ form.addEventListener ("submit", function (event) {
 
 
 
-)
+
