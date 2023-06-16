@@ -55,17 +55,20 @@ function displayCurrentWeather(data) {
   // console.log(UVI)
 
   // To display weather on the site
-  document.querySelector(".cityName").innerText = "Weather in " + name;
+  document.querySelector(".city").innerText = "Weather in " + name;
   // document.querySelector("weather-icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
-  document.querySelector(".description").innerText = "Todays weather " + description;
-  document.querySelector(".temperature").innerText = temp + "°C";
+  document.querySelector(".short").innerText = description;
+  document.querySelector(".temperature").innerText = temp + "°F";
   document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
   document.querySelector(".wind-speed").innerText = "Wind Speed: " + speed + " MPH";
-  document.querySelector(".uv-index").innertext = "UV Index" + UVI;
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
+
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
 
  }
+  document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
+  document.querySelector(".weather-today").classList.remove("loading");
+}
 
 
 //   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
