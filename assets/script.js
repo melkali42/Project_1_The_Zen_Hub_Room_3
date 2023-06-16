@@ -62,10 +62,7 @@ function displayCurrentWeather(data) {
   document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
   document.querySelector(".wind-speed").innerText = "Wind Speed: " + speed + " MPH";
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
-
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
-
- }
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
   document.querySelector(".weather-today").classList.remove("loading");
 }
