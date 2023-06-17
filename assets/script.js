@@ -66,6 +66,7 @@ function displayCurrentWeather(data) {
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
   document.querySelector(".weather-today").classList.remove("loading");
   document.querySelector(".weather-icon").src = "http://openweathermap.org/img/wn/"+ icon +".png";
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + description + "')";
   console.log(icon);
 }
 
