@@ -2,12 +2,13 @@
 // Favorites list functionality
 var favButton = document.getElementById("favorites-button");
 var cityName = document.getElementById("search-input").value;
+var favCities = JSON.parse(localStorage.getItem('favorites')) || [];
 
 function addFavorite(){
   // checking if favorites already exist
-  if(localStorage.getItem('favorites')){
+  if(favCities != cityName){
 
-      var storage = JSON.parse(localStorage['favorites']);
+      var storage = JSON.parse(localStorage.getItem('favorites'));
       
       // checking if city is already in favs list
       for (var i = 0;i < storage.length;i++){
