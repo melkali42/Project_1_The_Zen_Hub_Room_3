@@ -69,7 +69,7 @@
             <div class="flex">
             <!-- adding src image -->
                 <img src="" alt=" Weather in [city name]" class="weather-icon">
-                <div class="short"> [cloudy]</div>
+                <div class="short"> </div>
             </div>
             <div class="humidity">Humidity: [humidity] </div>
             <div class="wind-speed">Wind Speed: [wind speed] </div>
@@ -103,13 +103,16 @@
             </div>
 
 <!--creating the suggestion-->
-        <div class="todo_suggestion">Today, the weather is perfect for [what to do] </div>
+        <div id="todo_suggestion">Today is a great day for:</div>
+        <button id="toDoButton" type="button" onclick="toDo()">Click for a suggestion</button>
+        
 
 
 <!-- creating an add to Favorites Button -->
-        <div class="add-to-favorites"></div>
+    <center>
+        <div class="add-to-favorites" id="addToFavorites"></div>
         <button id="favorites-button"> Add to ☆Favorites </button>
-
+    </center>
     <!-- changing cursor to pointer for buttons on this page-->
     <style>
         button {
