@@ -63,7 +63,7 @@ function displayCurrentWeather(data) {
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
-  document.querySelector(".weather-today").src ="http://openweathermap.org/img/wn/"+icon+".png";
+  // document.querySelector(".weather-today").src ="http://openweathermap.org/img/wn/"+icon+".png";
 }
 
 
