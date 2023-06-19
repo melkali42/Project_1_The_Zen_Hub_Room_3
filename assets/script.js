@@ -1,28 +1,34 @@
 
-// Favorites button add to favorites list
-var addFav = document.getElementById("addToFavorites");
+// FAVORITES LIST
+var favButton = document.getElementById("favorites-button");
+var cityName = document.getElementById("search-input").value;
+var favCities = JSON.parse(localStorage.getItem('favorites')) || [];
 
+function addFavorite(){
+  // checking if city is already in favs list
+  if(favCities.includes(document.getElementById("search-input").value)){
+    console.log(document.getElementById("search-input").value + " is already in favorites list")
 
-function addFavorite() {
-  var favoritesList = JSON.parse(localStorage.getItem("allFavorites"));
-  if (favoritesList == null) favoritesList = [];
-  var cityName = document.getElementById("city").value;
-
-  localStorage.setItem(cityName, JSON.stringify(cityName));
-  favoritesList.push(cityName);
-  localStorage.setItem("allFavorites", JSON.stringify(favoritesList));
-  console.log(favoritesList);
+  // adding city to favs list
+  }else{
+    console.log("Adding " + document.getElementById("search-input").value + " to favorites list...");
+    favCities.push(document.getElementById("search-input").value);
+    localStorage.setItem('favorites', JSON.stringify(favCities));
+    console.log('favs list updated!');
+    console.log(favCities);
+  }
 }
 
-addFav.addEventListener("click", function () {
-  console.log("Done!");
-});
+  // Fav button click listener
+favButton.addEventListener("click", addFavorite);
 
+// SEARCH BAR
 var searchBar = document.querySelector(".search-bar");
 var searchButton = document.getElementById("search-button");
 var searchInput = document.getElementById("search-input");
 var form = document.getElementById("form");
 var apiKey = "b2a3d794234a2e76abf165d172c1074d";
+
 // establish the API URL- save in a variable
 // make another function get forecast weather info
 
@@ -78,10 +84,11 @@ form.addEventListener ("submit", function (event) {
   var cityName = searchInput.value;
   console.log(cityName);
   getCurrentWeatherInfo(cityName);
-})
+});
 
 var toDoButton = document.getElementById("toDoButton")
 
+var toDoButton = document.getElementById("toDoButton")
 
 function toDo(event) {
   const urlBoredApi = 'http://www.boredapi.com/api/activity?participants=1'
