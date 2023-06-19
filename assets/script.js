@@ -56,7 +56,6 @@ function displayCurrentWeather(data) {
 
   // To display weather on the site
   document.querySelector(".city").innerText = "Weather in " + name;
-  // document.querySelector("weather-icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
   document.querySelector(".short").innerText = description;
   document.querySelector(".temperature").innerText = temp + "°F";
   document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
@@ -64,10 +63,9 @@ function displayCurrentWeather(data) {
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
-  document.querySelector(".weather-today").classList.remove("loading");
+  document.querySelector(".weather-today").src ="http://openweathermap.org/img/wn/"+icon+".png";
 }
 
-//   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
 
 form.addEventListener ("submit", function (event) {
   event.preventDefault();
