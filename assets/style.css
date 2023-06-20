@@ -204,3 +204,14 @@ img{
     color:aquamarine;
     transition: .3s ease-in-out;
 }
+
+#inspirationalQuote{
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    color: #86b37c;
+
+}
+
