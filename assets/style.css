@@ -215,3 +215,6 @@ img{
 
 }
 
+#no-bullets {
+    list-style-type: none;
+}
