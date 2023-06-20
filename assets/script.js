@@ -50,9 +50,6 @@ favCities.forEach((item) => {
   listFavs.appendChild(li);
 });
 
-var ulList = document.getElementById("ul-favs");
-ulList.classList.add("no-bullets");
-
 // Creating Remove from Favorites button
 function removeFavorite(){
   var index = favCities.indexOf(city);
