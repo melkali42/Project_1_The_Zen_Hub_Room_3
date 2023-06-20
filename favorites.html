@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <title>☆Favorites Page</title>
 </head>
 <body>
 <!--creating header for Favorites page -->
     <header>
-        <h1> <div class="favorites"></div>Your Favorite Cities</h1>
-
-<!--creating a button to go back to the home page -->
+        <h1>Zen Hub</h1>
 </header>
 
 <!<!--TIME DATE WIDGET-->
@@ -40,14 +39,21 @@
 
 
     <!-- creating search bar and icon button -->
-    <div class="card">
+    <div class="card" id="card-container">
 
     <h2>Favorite Cities</h2>
+
+    <!-- creating a return home access button-->
+    <div class="home_page"> </div>
+    <button onclick="window.location.href='index.html'">Back Home</button>
+    
     <div id="favs-list">
-        <ul></ul>
+        <ul id="ul-favs"></ul>
     </div>
-        <!-- change this div to a form element -->
-        <form id="form">
+
+
+
+        <form id="form" hidden>
             <div class="flex">
             <input type="text" id="search-input" placeholder="Search for a city" />
             <!-- add a type of submit -->
@@ -60,12 +66,8 @@
             </div>
         </form>
 
-<!-- creating a return home access button-->
-    <div class="home_page"> </div>
-    <button onclick="window.location.href='index.html'">Back Home</button>
-
         <!-- creating weather card specific text +image -->
-        <div class="weather-today loading">
+        <div class="weather-today loading" id="city-card">
             <h3  class="city" id="city"> [city name]</h3>
             <h3 class="temperature"> [degrees]°[F/C]
             </h3>
@@ -108,11 +110,12 @@
 <!--creating the suggestion-->
         <div id="todo_suggestion">Today is a great day for:</div>
         <button id="toDoButton" type="button" onclick="toDo()">Click for a suggestion</button>
+        </div>
         
 
 
 <!-- creating an add to Favorites Button -->
-    <center>
+    <center hidden>
         <div class="add-to-favorites" id="addToFavorites"></div>
         <button id="favorites-button"> Add to ☆Favorites </button>
     </center>

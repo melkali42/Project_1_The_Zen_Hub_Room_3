@@ -1,4 +1,5 @@
 // FAVORITES LIST
+
 var favButton = document.getElementById("favorites-button");
 var cityName = document.getElementById("search-input").value;
 var favCities = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -21,12 +22,17 @@ function addFavorite(){
   // Fav button click listener
 favButton.addEventListener("click", addFavorite);
 
-  //Creating nav list of favorites
+  //Creating list of favorites
 var listFavs = document.getElementById("favs-list");
 
 favCities.forEach((item) => {
-  let li = document.createElement("li");
+  let li = document.createElement("button");
   li.innerText = item;
+  li.classList.add("city-button");
+  li.value = item;
+  li.addEventListener("click", function() {
+    getCurrentWeatherInfo(this.value);
+  });
   listFavs.appendChild(li);
 })
 
@@ -115,6 +121,3 @@ function toDo(event) {
 }
 
 toDoButton.addEventListener("click", toDo);
-
-
-

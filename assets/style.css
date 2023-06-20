@@ -187,3 +187,20 @@ img{
     background-color: #1f1f1fd6;
     border-radius: 50%;
 }
+
+.city-button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    border-color: white;
+    border-style: hidden;
+    background-color:#2e2e2ed8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+.fav-city-button:hover {
+    color:aquamarine;
+    transition: .3s ease-in-out;
+}
