@@ -134,6 +134,7 @@ body {
     border-radius: 3px;
     background-color: #2e2e2ed8;
     color: #ffffff;
+    text-align: center;
 }
 
 
@@ -238,4 +239,15 @@ img{
     justify-content: center;
     text-align: center;
     margin: 1rem;
+}
+
+#gif{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0rem;
+    border-radius: 0%;
+    background-color: #2e2e2e00;
+    
 }
