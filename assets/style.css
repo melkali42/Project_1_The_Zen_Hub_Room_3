@@ -8,6 +8,8 @@ h1 {
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
+    background-color: #2e2e2ed8;
+    padding: 10px 30px 10px 30px;
 }
 
 h2 {
@@ -186,6 +188,23 @@ img{
     border-radius: 50%;
 }
 
+.city-button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    border-color: white;
+    border-style: hidden;
+    background-color:#2e2e2ed8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+.fav-city-button:hover {
+    color:aquamarine;
+    transition: .3s ease-in-out;
+}
+
 #inspirationalQuote{
     font-size: 1rem;
     font-weight: lighter;
@@ -195,3 +214,4 @@ img{
     color: #86b37c;
 
 }
+

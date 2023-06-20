@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <title>The Zen Hub</title>
 
@@ -58,7 +59,9 @@
         </form>
 
 <!-- creating a Favorites page access button-->
-        <div class="favorites_page"> </div>
+        <div class="favorites_page" id="favoritesButton"> </div>
+        <div id="favs-list" hidden>
+            <ul></ul></div>
         <button onclick="window.location.href='favorites.html'"> ☆Favorites </button>
 
         <!-- creating weather card specific text +image -->
@@ -126,9 +129,8 @@
 
 
     
-    <script src="assets/script.js"></script>
+    <script src="./assets/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="assets/script.js"></script>
 
 </body>
 
