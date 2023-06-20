@@ -8,8 +8,9 @@ h1 {
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
-    background-color: #2e2e2ed8;
+    background-color:rgba(200, 164, 221, 0.635);
     padding: 10px 30px 10px 30px;
+    border-radius: 3px;
 }
 
 h2 {
@@ -86,7 +87,8 @@ body {
 }
 
 #search-input {
-    margin-inline-start: 84px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-inline-start: 10px;
     border: none;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -217,4 +219,22 @@ img{
 
 #no-bullets {
     list-style-type: none;
+
+.city-button{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: small;
+    text-align: center;
+    text-transform: capitalize;
+    justify-content: center;
+    display: table-column;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
 }
