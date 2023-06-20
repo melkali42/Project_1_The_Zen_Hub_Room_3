@@ -8,6 +8,9 @@ h1 {
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
+    background-color:rgba(200, 164, 221, 0.635);
+    padding: 10px 30px 10px 30px;
+    border-radius: 3px;
 }
 
 h2 {
@@ -84,7 +87,8 @@ body {
 }
 
 #search-input {
-    margin-inline-start: 84px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-inline-start: 10px;
     border: none;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -130,34 +134,40 @@ body {
     border-radius: 3px;
     background-color: #2e2e2ed8;
     color: #ffffff;
+    text-align: center;
 }
 
 
 .temperature{
     font-size: 1.5rem;
     font-weight: lighter;
-    margin-inline-start: 143px;
     justify-content: center;
+    font-weight: bold;
+    text-align: center;
 }
 
 .short{
     font-size: large;
     font-weight: lighter;
     margin-inline-start: 20px;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 #city{
     font-size: 1rem;
     font-weight: lighter;
-    margin-inline-start: 122px;
+    text-align: center;
     padding-top: 1rem;
 }
 
 
 .flex{
     display: flex;
-    align-items: center;
+    margin: 10px;
+    padding: 5px;
 }
 
 .weather-today.loading{
@@ -166,6 +176,78 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+}
 
+#todo_suggestion{
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+    color: rgb(180, 138, 194);
+    text-decoration: underline;
+}
 
+img{
+    background-color: #1f1f1fd6;
+    border-radius: 50%;
+}
+
+.city-button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    border-color: white;
+    border-style: hidden;
+    background-color:#2e2e2ed8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+}
+.fav-city-button:hover {
+    color:aquamarine;
+    transition: .3s ease-in-out;
+}
+
+#inspirationalQuote{
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    color: #86b37c;
+
+}
+
+#no-bullets {
+    list-style-type: none;
+}
+
+.city-button{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: small;
+    text-align: center;
+    text-transform: capitalize;
+    justify-content: center;
+    display: table-column;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+#gif{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: 0rem;
+    border-radius: 0%;
+    background-color: #2e2e2e00;
+    
 }

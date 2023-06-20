@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +8,15 @@
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
-    <title>The Zen Hub</title>
-
-
+    <title>☆Favorites Page</title>
 </head>
-
 <body>
-<!-- creating header -->
-<header>
-    <div class="flex">
-        <h1>The Zen Hub</h1>
-        <IMG id="gif" src="https://media.tenor.com/cMzLcFODP1EAAAAj/browniecell.gif" style="width:3rem; height:3rem;" />
-    </div>
+<!--creating header for Favorites page -->
+    <header>
+        <h1>Zen Hub</h1>
+</header>
 
-<!--TIME DATE WIDGET-->
+<!<!--TIME DATE WIDGET-->
 
 <div class="widget-container">
     <div id="time"></div>
@@ -45,9 +39,21 @@
 
 
     <!-- creating search bar and icon button -->
-    <div class="card">
-        <!-- change this div to a form element -->
-        <form id="form">
+    <div class="card" id="card-container">
+
+    <h2>Favorite Cities</h2>
+
+    <!-- creating a return home access button-->
+    <div class="home_page"> </div>
+    <button onclick="window.location.href='index.html'">Back Home</button>
+    
+    <div id="favs-list">
+        <ul id="ul-favs" class="no-bullets"></ul>
+    </div>
+
+
+
+        <form id="form" hidden>
             <div class="flex">
             <input type="text" id="search-input" placeholder="Search for a city" />
             <!-- add a type of submit -->
@@ -60,18 +66,8 @@
             </div>
         </form>
 
-<!-- creating a Favorites page access button-->
-        <div class="favorites_page" id="favoritesButton"> </div>
-        <div id="favs-list" hidden>
-            <ul></ul></div>
-        <button onclick="window.location.href='favorites.html'"> ☆Favorites </button>
-
         <!-- creating weather card specific text +image -->
-        <div class="weather-today loading">
-
-            <!-- inspirational quote -->
-            <q id="inspirationalQuote"> </q>
-
+        <div class="weather-today loading" id="city-card">
             <h3  class="city" id="city"> [city name]</h3>
             <h3 class="temperature"> [degrees]°[F/C]
             </h3>
@@ -114,14 +110,16 @@
 <!--creating the suggestion-->
         <div id="todo_suggestion">Today is a great day for:</div>
         <button id="toDoButton" type="button" onclick="toDo()">Click for a suggestion</button>
+        </div>
         
 
 
 <!-- creating an add to Favorites Button -->
-    <center>
+    <center hidden>
         <div class="add-to-favorites" id="addToFavorites"></div>
         <button id="favorites-button"> Add to ☆Favorites </button>
     </center>
+
     <!-- changing cursor to pointer for buttons on this page-->
     <style>
         button {
@@ -135,5 +133,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </body>
-
 </html>
