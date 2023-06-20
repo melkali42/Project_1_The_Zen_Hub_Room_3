@@ -86,7 +86,8 @@ body {
 }
 
 #search-input {
-    margin-inline-start: 84px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-inline-start: 10px;
     border: none;
     background-color: #2e2e2ed8;
     color: #ffffff;
@@ -225,4 +226,11 @@ img{
     text-transform: capitalize;
     justify-content: center;
     display: table-column;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
 }
