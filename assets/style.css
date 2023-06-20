@@ -136,28 +136,33 @@ body {
 .temperature{
     font-size: 1.5rem;
     font-weight: lighter;
-    margin-inline-start: 143px;
     justify-content: center;
+    font-weight: bold;
+    text-align: center;
 }
 
 .short{
     font-size: large;
     font-weight: lighter;
     margin-inline-start: 20px;
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 #city{
     font-size: 1rem;
     font-weight: lighter;
-    margin-inline-start: 122px;
+    text-align: center;
     padding-top: 1rem;
 }
 
 
 .flex{
     display: flex;
-    align-items: center;
+    margin: 10px;
+    padding: 5px;
 }
 
 .weather-today.loading{
@@ -166,12 +171,17 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-
-
 }
 
 #todo_suggestion{
     justify-content: center;
     display: flex;
     margin: 10px;
+    color: rgb(180, 138, 194);
+    text-decoration: underline;
+}
+
+img{
+    background-color: #1f1f1fd6;
+    border-radius: 50%;
 }

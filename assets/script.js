@@ -1,27 +1,34 @@
 
-// Favorites button add to favorites list
-var addFav = document.getElementById("addToFavorites");
+// FAVORITES LIST
+var favButton = document.getElementById("favorites-button");
+var cityName = document.getElementById("search-input").value;
+var favCities = JSON.parse(localStorage.getItem('favorites')) || [];
 
-function addFavorite() {
-  var favoritesList = JSON.parse(localStorage.getItem("allFavorites"));
-  if (favoritesList == null) favoritesList = [];
-  var cityName = document.getElementById("city").value;
+function addFavorite(){
+  // checking if city is already in favs list
+  if(favCities.includes(document.getElementById("search-input").value)){
+    console.log(document.getElementById("search-input").value + " is already in favorites list")
 
-  localStorage.setItem(cityName, JSON.stringify(cityName));
-  favoritesList.push(cityName);
-  localStorage.setItem("allFavorites", JSON.stringify(favoritesList));
-  console.log(favoritesList);
+  // adding city to favs list
+  }else{
+    console.log("Adding " + document.getElementById("search-input").value + " to favorites list...");
+    favCities.push(document.getElementById("search-input").value);
+    localStorage.setItem('favorites', JSON.stringify(favCities));
+    console.log('favs list updated!');
+    console.log(favCities);
+  }
 }
 
-addFav.addEventListener("click", function () {
-  console.log("Done!");
-});
+  // Fav button click listener
+favButton.addEventListener("click", addFavorite);
 
+// SEARCH BAR
 var searchBar = document.querySelector(".search-bar");
 var searchButton = document.getElementById("search-button");
 var searchInput = document.getElementById("search-input");
 var form = document.getElementById("form");
 var apiKey = "b2a3d794234a2e76abf165d172c1074d";
+
 // establish the API URL- save in a variable
 // make another function get forecast weather info
 
@@ -45,7 +52,7 @@ function displayCurrentWeather(data) {
   const { temp, humidity } = data.main;
   console.log(temp, humidity)
   const { speed } = data.wind;
-  const { icon } = data.weather[0].icon;
+  const icon  = data.weather[0].icon;
   const UVI = data.uvi;
   const sunriseTimestamp = data.sys.sunrise;
   const sunsetTimestamp = data.sys.sunset;
@@ -63,8 +70,12 @@ function displayCurrentWeather(data) {
   document.querySelector(".sunrise").innerText = "Sunrise time: " + sunriseTime;
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime
   document.querySelector(".sunset").innerText = "Sunset time: " + sunsetTime;
-  // document.querySelector(".weather-today").src ="http://openweathermap.org/img/wn/"+icon+".png";
+  document.querySelector(".weather-today").classList.remove("loading");
+  document.querySelector(".weather-icon").src = "http://openweathermap.org/img/wn/"+ icon +".png";
+  document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + description + "')";
+  console.log(icon);
 }
+
 
 
 form.addEventListener ("submit", function (event) {
@@ -72,13 +83,15 @@ form.addEventListener ("submit", function (event) {
   var cityName = searchInput.value;
   console.log(cityName);
   getCurrentWeatherInfo(cityName);
-})
+});
 
 var toDoButton = document.getElementById("toDoButton")
-const url = 'http://www.boredapi.com/api/activity?participants=1'
+
+var toDoButton = document.getElementById("toDoButton")
 
 function toDo(event) {
-  fetch(url)
+  const urlBoredApi = 'http://www.boredapi.com/api/activity?participants=1'
+  fetch(urlBoredApi)
     .then((response) => {
       return response.json();
     })
