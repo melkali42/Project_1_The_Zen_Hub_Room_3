@@ -119,7 +119,8 @@ form.addEventListener("submit", function(event) {
       })
       .then(function(data) {
         console.log(data);
-        quoteText.innerText = data[0].text;
+        const randomIndex = Math.floor(Math.random() * data.length);
+        quoteText.innerText = data[randomIndex].text;
       });
   }
 
