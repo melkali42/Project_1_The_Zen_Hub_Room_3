@@ -1,4 +1,3 @@
-
 // FAVORITES LIST
 var favButton = document.getElementById("favorites-button");
 var cityName = document.getElementById("search-input").value;
@@ -21,6 +20,15 @@ function addFavorite(){
 
   // Fav button click listener
 favButton.addEventListener("click", addFavorite);
+
+  //Creating nav list of favorites
+var listFavs = document.getElementById("favs-list");
+
+favCities.forEach((item) => {
+  let li = document.createElement("li");
+  li.innerText = item;
+  listFavs.appendChild(li);
+})
 
 // SEARCH BAR
 var searchBar = document.querySelector(".search-bar");
