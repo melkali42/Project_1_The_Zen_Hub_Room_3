@@ -146,3 +146,21 @@ function toDo(event) {
 }
 
 toDoButton.addEventListener("click", toDo);
+
+form.addEventListener("submit", function(event) {
+  const quoteText = document.getElementById("inspirationalQuote");
+
+  function inspirationalQuote() {
+    const urlInspirational = 'https://type.fit/api/quotes';
+    fetch(urlInspirational)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        quoteText.innerText = data[randomIndex].text;
+      });
+  }
+
+  inspirationalQuote(); // Call the function immediately
+});
