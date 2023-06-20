@@ -8,8 +8,9 @@ h1 {
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
-    background-color: #2e2e2ed8;
+    background-color:rgba(200, 164, 221, 0.635);
     padding: 10px 30px 10px 30px;
+    border-radius: 3px;
 }
 
 h2 {
