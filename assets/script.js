@@ -108,4 +108,21 @@ function toDo(event) {
 toDoButton.addEventListener("click", toDo);
 
 
+form.addEventListener("submit", function(event) {
+  const quoteText = document.getElementById("inspirationalQuote");
+
+  function inspirationalQuote() {
+    const urlInspirational = 'https://type.fit/api/quotes';
+    fetch(urlInspirational)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        console.log(data);
+        quoteText.innerText = data[0].text;
+      });
+  }
+
+  inspirationalQuote(); // Call the function immediately
+});
 

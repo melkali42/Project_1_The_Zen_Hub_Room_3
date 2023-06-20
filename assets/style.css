@@ -185,3 +185,12 @@ img{
     background-color: #1f1f1fd6;
     border-radius: 50%;
 }
+
+#inspirationalQuote{
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    padding-top: 1rem;
+    color: #86b37c;
+}
