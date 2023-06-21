@@ -1,6 +1,7 @@
 // FAVORITES LIST
 
 var favButton = document.getElementById("favorites-button");
+var removeButton = document.getElementById("remove-button");
 var cityName = document.getElementById("search-input").value;
 var favCities = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -26,15 +27,39 @@ favButton.addEventListener("click", addFavorite);
 var listFavs = document.getElementById("favs-list");
 
 favCities.forEach((item) => {
-  let li = document.createElement("button");
-  li.innerText = item;
-  li.classList.add("city-button");
-  li.value = item;
-  li.addEventListener("click", function() {
+  let li = document.createElement("ul");
+
+  let cityButton = document.createElement("button");
+  cityButton.innerText = item;
+  cityButton.classList.add("city-button");
+  cityButton.value = item;
+  cityButton.addEventListener("click", function() {
     getCurrentWeatherInfo(this.value);
   });
+  li.appendChild(cityButton);
+
+  let removeButton = document.createElement("button");
+  removeButton.innerText = "Remove";
+  removeButton.classList.add("remove-button");
+  removeButton.addEventListener("click", function() {
+    removeFavorite(item);
+    li.remove();
+  });
+  li.appendChild(removeButton);
+
   listFavs.appendChild(li);
-})
+});
+
+// Creating Remove from Favorites button
+function removeFavorite(){
+  var index = favCities.indexOf(city);
+  if (index !== -1) {
+    favCities.splice(index, 1);
+    localStorage.setItem('favorites', JSON.stringify(favCities));
+    console.log('Favorites list updated!');
+    console.log(favCities);
+  }
+}
 
 // SEARCH BAR
 var searchBar = document.querySelector(".search-bar");
@@ -77,6 +102,7 @@ function displayCurrentWeather(data) {
 
   // To display weather on the site
   document.querySelector(".city").innerText = "Weather in " + name;
+  // document.querySelector("weather-icon").src = `https://openweathermap.org/img/wn/${icon}.png`;
   document.querySelector(".short").innerText = description;
   document.querySelector(".temperature").innerText = temp + "°F";
   document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
@@ -90,7 +116,7 @@ function displayCurrentWeather(data) {
   console.log(icon);
 }
 
-
+//   document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
 
 form.addEventListener ("submit", function (event) {
   event.preventDefault();
@@ -119,9 +145,7 @@ function toDo(event) {
     });
 }
 
-
 toDoButton.addEventListener("click", toDo);
-
 
 form.addEventListener("submit", function(event) {
   const quoteText = document.getElementById("inspirationalQuote");
@@ -133,7 +157,6 @@ form.addEventListener("submit", function(event) {
         return response.json();
       })
       .then(function(data) {
-        console.log(data);
         const randomIndex = Math.floor(Math.random() * data.length);
         quoteText.innerText = data[randomIndex].text;
       });
@@ -141,4 +164,3 @@ form.addEventListener("submit", function(event) {
 
   inspirationalQuote(); // Call the function immediately
 });
-
