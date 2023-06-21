@@ -14,7 +14,10 @@ As a general user, I want an app to display the current temperature, humidity, w
 
 ## Installation
 
-We used CSS, HTML, JavaScript, Web API's, Third-Party API's, and Server-End API's for this project. 
+We used CSS, HTML, Bulma, JavaScript, Web API's, Third-Party API's, and Server-End API's for this project. 
+OpenWeather API, Bored Acctivity API, and Affirmations API. 
+
+
 
 ## Usage
 This is the URL for the deployed application: href:https://melkali42.github.io/Project_1_Room_3/
@@ -23,9 +26,13 @@ This is the URL for my GitHub repository for this challenge: https://github.com/
 
 Click on the link to open The Zen Hub app, Type in the name of a city and click the magnifying glass icon. 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Screenshot1](https://github.com/melkali42/Project_1_Room_3/blob/DEVELOP/images/Zen%20Hub%201.PNG)
+![Screenshot2](https://github.com/melkali42/Project_1_Room_3/blob/DEVELOP/images/Zen%20Hub%202.PNG)
+![Screenshot3](https://github.com/melkali42/Project_1_Room_3/blob/DEVELOP/images/Zen%20Hub%203.PNG)
+![Screenshot4](https://github.com/melkali42/Project_1_Room_3/blob/DEVELOP/images/Zen%20Hub%204.PNG)
+![Screenshot5](https://github.com/melkali42/Project_1_Room_3/blob/DEVELOP/images/Zen%20Hub%204.PNG)
+    
+  
 
 ## Credits
 
